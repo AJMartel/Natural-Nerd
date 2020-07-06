@@ -14,6 +14,7 @@
 #define NUM_LEDS LEDS_PER_ROW*ROWS
 
 #define BRIGHTNESS_DIVIDER 3
+#define FRAME_DELAY 100 // delay between frames of an animation in mSec
 
 //The CS pin on the SDCARD
 #define CHIP_SELECT SS
@@ -175,5 +176,5 @@ void loop() {
    led_clear();  
    readNext(readFile);
    FastLED.show();
-   delay(100);
+   delay(FRAME_DELAY);
 }
